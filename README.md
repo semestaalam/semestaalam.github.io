@@ -1,2 +1,2 @@
 # semestaalam.github.io
-SEMESTA AI - Your Intelligence. Your Universe.
+ALAM AI - Your Intelligence. Your Universe.
