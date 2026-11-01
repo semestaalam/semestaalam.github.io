@@ -52,8 +52,8 @@ h1 {
 }
 
 .container {
-  width: 92%;
-  max-width: 900px;
+  width: 94%;
+  max-width: 1100px;
   margin: auto;
 }
 
@@ -66,9 +66,11 @@ h1 {
   color: #63d9ff;
 }
 
+/* EMPAT PAPAN LAYANAN */
+
 .services {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 15px;
   margin: 25px 0;
 }
@@ -77,28 +79,56 @@ h1 {
   background: #101b45;
   border: 1px solid #263c75;
   border-radius: 13px;
-  padding: 18px;
+  padding: 18px 14px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .service h3 {
   color: #69dcff;
   margin-top: 0;
+  font-size: 18px;
 }
 
 .service p {
   font-size: 14px;
   color: #d1d9f2;
+  flex-grow: 1;
 }
 
 .service button {
   background: #1768c5;
   color: white;
   border: none;
-  padding: 10px 17px;
+  padding: 10px 14px;
   border-radius: 7px;
   cursor: pointer;
+  width: 100%;
 }
+
+/* TAMPILAN TABLET */
+
+@media (max-width: 800px) {
+  .services {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* TAMPILAN HP */
+
+@media (max-width: 480px) {
+  .services {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 29px;
+  }
+}
+
+/* AREA CHAT */
 
 .chat {
   background: #101b45;
@@ -130,7 +160,6 @@ h1 {
   gap: 9px;
   align-items: center;
   margin-top: 10px;
-  flex-wrap: wrap;
 }
 
 .chat-actions button {
@@ -145,10 +174,11 @@ h1 {
 .upload-button {
   background: #293e75;
   color: white;
-  font-size: 23px !important;
+  font-size: 25px !important;
   width: 48px;
   height: 44px;
   padding: 0 !important;
+  flex-shrink: 0;
 }
 
 .send-button {
@@ -173,6 +203,7 @@ h1 {
   color: #b8d9ff;
   font-size: 13px;
   overflow-wrap: anywhere;
+  margin-top: 8px;
 }
 
 #jawaban {
@@ -204,11 +235,7 @@ button:disabled {
   cursor: wait;
 }
 
-@media(max-width:480px) {
-  h1 {
-    font-size: 29px;
-  }
-
+@media (max-width: 480px) {
   .chat {
     padding: 14px;
   }
@@ -220,8 +247,13 @@ button:disabled {
 
 <header>
   <img src="/semesta-logo.png" alt="Logo ALAM AI">
+
   <h1>ALAM AI</h1>
-  <div class="tagline">Your Intelligence. Your Universe.</div>
+
+  <div class="tagline">
+    Your Intelligence. Your Universe.
+  </div>
+
   <div class="brand-line">
     One idea can open an entire universe of possibilities.
   </div>
@@ -231,20 +263,25 @@ button:disabled {
 
   <section class="intro">
     <h2>Selamat Datang di ALAM AI</h2>
+
     <p>
       Satu platform AI untuk membantu kebutuhan hukum,
-      bisnis, kreativitas, dan pekerjaan digital Anda.
+      bisnis, kreativitas, dan berbagai pekerjaan digital Anda.
     </p>
   </section>
+
+  <!-- EMPAT PAPAN LAYANAN -->
 
   <section class="services">
 
     <div class="service">
       <h3>Legal Assistant</h3>
+
       <p>
         Informasi hukum keluarga, perceraian,
-        hak asuh anak, mediasi, dan persiapan dokumen.
+        hak asuh anak, mediasi, dan persiapan dokumen litigasi.
       </p>
+
       <button onclick="pilih('Legal Assistant')">
         Pilih Layanan
       </button>
@@ -252,10 +289,13 @@ button:disabled {
 
     <div class="service">
       <h3>Business Assistant</h3>
+
       <p>
         Ide usaha, pengembangan UMKM,
-        pemasaran digital, dan strategi bisnis.
+        strategi bisnis, pemasaran digital,
+        dan pengembangan usaha.
       </p>
+
       <button onclick="pilih('Business Assistant')">
         Pilih Layanan
       </button>
@@ -263,39 +303,34 @@ button:disabled {
 
     <div class="service">
       <h3>Content Creator</h3>
+
       <p>
-        Ide konten, storytelling, naskah video,
-        promosi, dan kreativitas digital.
+        Pembuatan konten video, storytelling,
+        naskah, materi promosi, dan kreativitas digital.
       </p>
+
       <button onclick="pilih('Content Creator')">
         Pilih Layanan
       </button>
     </div>
 
     <div class="service">
-      <h3>AI Assistant</h3>
-      <p>
-        Asisten AI untuk informasi,
-        produktivitas, dan berbagai kebutuhan digital.
-      </p>
-      <button onclick="pilih('AI Assistant')">
-        Pilih Layanan
-      </button>
-    </div>
-
-    <div class="service">
       <h3>SEJUTA PROMPT</h3>
+
       <p>
         Masukkan Ide Anda. Kembangkan ide menjadi
-        prompt untuk cerita, resep, bisnis, desain,
-        video, pendidikan, dan banyak lagi.
+        prompt AI untuk desain, cerita, resep,
+        pendidikan, produktivitas, dan berbagai kebutuhan kreatif.
       </p>
+
       <button onclick="pilih('SEJUTA PROMPT')">
         Kembangkan Ide
       </button>
     </div>
 
   </section>
+
+  <!-- CHAT ALAM AI -->
 
   <section class="chat">
 
@@ -337,6 +372,7 @@ button:disabled {
       class="wa-button"
       href="https://wa.me/6281907396212"
       target="_blank"
+      rel="noopener"
     >
       Hubungi WhatsApp Admin
     </a>
@@ -350,7 +386,8 @@ button:disabled {
 </main>
 
 <footer>
-  <strong>ALAM AI</strong> · Your Intelligence. Your Universe.
+  <strong>ALAM AI</strong>
+  · Your Intelligence. Your Universe.
   <br>
   Under Indonesian SSD Foundation
 </footer>
@@ -364,6 +401,7 @@ function pilih(layanan) {
   document.getElementById("pertanyaan").value =
     "Saya ingin menggunakan layanan " + layanan +
     ". Mohon bantu saya.";
+
   document.getElementById("pertanyaan").focus();
 }
 
@@ -446,7 +484,8 @@ async function kirimPertanyaan() {
 
   tombol.disabled = true;
   tombol.textContent = "Memproses...";
-  jawaban.textContent = "ALAM AI sedang memproses permintaan Anda...";
+  jawaban.textContent =
+    "ALAM AI sedang memproses permintaan Anda...";
 
   try {
 
@@ -475,7 +514,8 @@ async function kirimPertanyaan() {
       jawaban.innerHTML = formatJawaban(data.jawaban);
     } else {
       jawaban.textContent =
-        data.error || "Maaf, terjadi gangguan. Silakan coba kembali.";
+        data.error ||
+        "Maaf, terjadi gangguan. Silakan coba kembali.";
     }
 
   } catch (error) {
