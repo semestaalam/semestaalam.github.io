@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.alamai.app",
+      "sha256_cert_fingerprints": [
+        "DD:49:40:69:89:4A:D8:82:41:54:AD:99:30:5D:E4:E0:86:8E:89:26:4B:AD:22:B9:CB:4E:26:96:52:72:73:A5"
+      ]
+    }
+  }
+]
