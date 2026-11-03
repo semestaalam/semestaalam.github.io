@@ -1,0 +1,26 @@
+{
+  "id": "./",
+  "name": "ALAM AI",
+  "short_name": "ALAM AI",
+  "description": "Sahabat AI untuk kebutuhan hukum, bisnis, kreativitas, dan produktivitas.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#050b2b",
+  "theme_color": "#050b2b",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
